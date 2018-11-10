@@ -1,9 +1,12 @@
-temp=5
+function myFunction() {
+    temp=16
 
 if (temp < 14) {
-    console.log('wear a jacket');
+    document.getElementById("demo").innerHTML = "wear a jacket";
 } else if (temp < 25) {
-    console.log('wear a t-shirt');
+    document.getElementById("demo").innerHTML = "wear a t-shirt";
 } else {
-    console.log('wear a vest');
+    document.getElementById("demo").innerHTML = "wear a vest";
 }
+}
+
