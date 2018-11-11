@@ -5,10 +5,10 @@ function generateRandomNumber() {
     document.getElementById("demo").innerHTML = rand;
 
 if (rand < 14) {
-    document.getElementById("advice").innerHTML = "wear a jacket";
+    document.getElementById("advice").innerHTML = "Jacket";
 } else if (rand < 25) {
-    document.getElementById("advice").innerHTML = "wear a t-shirt";
+    document.getElementById("advice").innerHTML = "T-shirt";
 } else {
-    document.getElementById("advice").innerHTML = "wear a vest";
+    document.getElementById("advice").innerHTML = "Vest";
 }
 }
