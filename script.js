@@ -6,17 +6,13 @@ function loadXMLDoc() {
         this.responseText;
       }
     };
-    request.open("GET", "API goes here", true);
-    // Onload, means upon receiving response. As soon as some data comes back, I get console log.
+    request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=London&units=metric,uk&APPID=b626cf4076aabf3d744469a9ed262f07", true);
+    // Console log at onload means I know as soon as some data comes back.
     request.onload = function () {
       console.log("API send request working")
-      }
-    // request.send is sending the request to the server, so I could do this after button click
+    }
     request.send();
   }
-
-  //not sure if I still need this? Begin accessing JSON data here
-let data = JSON.parse(this.response);
 
 //Amina's random number generator and IF statements for temperature
 function generateRandomNumber() {
