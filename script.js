@@ -3,8 +3,10 @@ function loadXMLDoc() {
     request.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         let myObj = JSON.parse(this.responseText);
-          document.getElementById("demo").innerHTML =
+          document.getElementById("temperature").innerHTML =
           myObj.main.temp;
+          document.getElementById("wind").innerHTML =
+          myObj.wind.speed;
       }
     };
     request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=b626cf4076aabf3d744469a9ed262f07&units=metric", true);
