@@ -2,7 +2,7 @@ function loadXMLDoc() {
     let request = new XMLHttpRequest();
     request.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        let myObj = JSON.parse(this.responseText);
+        var myObj = JSON.parse(this.responseText);
           document.getElementById("temperature").innerHTML =
           myObj.main.temp;
           document.getElementById("wind").innerHTML =
@@ -18,11 +18,10 @@ function loadXMLDoc() {
   }
   
 //not sure how to define the Javascript object response so that I can do IF statement
-/*if (??? < 14) {
+if (myObj.main.temp < 14) {
   document.getElementById("advice").innerHTML = "Jacket";
-} else if (??? < 25) {
+} else if (myObj.main.temp < 25) {
   document.getElementById("advice").innerHTML = "T-shirt";
 } else {
   document.getElementById("advice").innerHTML = "Vest";
 }
-*/
