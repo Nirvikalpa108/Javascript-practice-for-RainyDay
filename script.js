@@ -7,6 +7,14 @@ function loadXMLDoc() {
           myObj.main.temp;
           document.getElementById("wind").innerHTML =
           myObj.wind.speed;
+
+          if (myObj.main.temp < 14) {
+            document.getElementById("advice").innerHTML = "Jacket";
+          } else if (myObj.main.temp < 25) {
+            document.getElementById("advice").innerHTML = "T-shirt";
+          } else {
+            document.getElementById("advice").innerHTML = "Vest";
+          }
       }
     };
     request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=b626cf4076aabf3d744469a9ed262f07&units=metric", true);
@@ -17,11 +25,4 @@ function loadXMLDoc() {
     request.send();
   }
   
-//not sure how to define the Javascript object response so that I can do IF statement
-if (myObj.main.temp < 14) {
-  document.getElementById("advice").innerHTML = "Jacket";
-} else if (myObj.main.temp < 25) {
-  document.getElementById("advice").innerHTML = "T-shirt";
-} else {
-  document.getElementById("advice").innerHTML = "Vest";
-}
+
