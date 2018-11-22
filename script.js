@@ -8,12 +8,14 @@ function loadXMLDoc() {
           document.getElementById("wind").innerHTML =
           myObj.wind.speed;
 
-          if (myObj.main.temp < 14) {
-            document.getElementById("advice").innerHTML = "Jacket";
-          } else if (myObj.main.temp < 25) {
+          if (myObj.main.temp > 25 && myObj.wind.speed < 10) {
             document.getElementById("advice").innerHTML = "T-shirt";
+          } else if (myObj.main.temp < 25 > 15 && myObj.wind.speed < 10) {
+            document.getElementById("advice").innerHTML = "Jersey"; 
+          } else if ((!myObj.main.temp <= 14) && myObj.wind.speed < 24 > 11) {
+            document.getElementById("advice").innerHTML = "Jersey";
           } else {
-            document.getElementById("advice").innerHTML = "Vest";
+            document.getElementById("advice").innerHTML = "Jacket";
           }
       }
     };
