@@ -12,7 +12,7 @@ function loadXMLDoc() {
             document.getElementById("advice").innerHTML = "T-shirt";
           } else if (myObj.main.temp < 25 > 15 && myObj.wind.speed < 10) {
             document.getElementById("advice").innerHTML = "Jersey"; 
-          } else if ((!myObj.main.temp <= 14) && myObj.wind.speed < 24 > 11) {
+          } else if (!(myObj.main.temp <= 14) && myObj.wind.speed < 24 > 11) {
             document.getElementById("advice").innerHTML = "Jersey";
           } else {
             document.getElementById("advice").innerHTML = "Jacket";
