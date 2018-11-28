@@ -1,1 +1,3 @@
-export const YOUR_API_KEY = "YOUR_API_KEY";
+define({
+    YOUR_API_KEY: "Put your API here"
+});
