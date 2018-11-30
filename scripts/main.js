@@ -7,15 +7,20 @@ requirejs(["./config"], function(config) {
       document.getElementById("temperature").innerHTML = myObj.main.temp;
       document.getElementById("wind").innerHTML = myObj.wind.speed;
     
-        if (myObj.main.temp > 25 && myObj.wind.speed < 10) {
+
+      switch (myObj.main.temp, myObj.wind.speed) {
+        case myObj.main.temp > 25 && myObj.wind.speed < 10:
         document.getElementById("advice").innerHTML = "T-shirt";
-        } else if (myObj.main.temp < 25 > 15 && myObj.wind.speed < 10) {
-        document.getElementById("advice").innerHTML = "Jersey"; 
-        } else if (!(myObj.main.temp <= 14) && myObj.wind.speed < 24 > 11) {
+        break;
+        case myObj.main.temp < 25 > 15 && myObj.wind.speed < 10:
         document.getElementById("advice").innerHTML = "Jersey";
-        } else {
+        break;
+        case (!(myObj.main.temp <= 14) && myObj.wind.speed < 24 > 11):
+        document.getElementById("advice").innerHTML = "Jersey";
+        break;
+        default:
         document.getElementById("advice").innerHTML = "Jacket";
-        }
+      }
       }
     };
         request.open("GET", config.YOUR_API_KEY, true);
